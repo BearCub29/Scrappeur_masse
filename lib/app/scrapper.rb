@@ -30,7 +30,7 @@ class Scrapper
 
   def save_as_spreadsheet
     @data = scrapping_mairie
-    session = GoogleDrive::Session.from_config("config.json")
+    session = GoogleDrive::Session.from_config(".env")
     ws = session.spreadsheet_by_key("1amJk00JLzqRtWz3eVfyE-WTw-YFjyEuanQ9IJZAttZA").worksheets[0]
     n = 1
     m = 1
